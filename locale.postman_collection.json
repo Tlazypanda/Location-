@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "825664cb-7e00-4dc7-a0b8-7f3700bf2b30",
+		"name": "locale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add ride",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 53701e0cc0f8e8c0e5f62de8fbf4ab3434f269ed",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":1,\n\t\"vehicle_id\":1,\n\t\"source_id\":1,\n\t\"dest_id\":1,\n\t\"package_id\":1,\n\t\"travel_type\":1,\n\t\"from_time\":null\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/home/add_ride/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"home",
+						"add_ride",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit ride",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 53701e0cc0f8e8c0e5f62de8fbf4ab3434f269ed",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"vehicle_id\":1,\n\t\"source_id\":1,\n\t\"dest_id\":1,\n\t\"package_id\":2,\n\t\"travel_type\":2\n\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/home/3/edit_ride/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"home",
+						"3",
+						"edit_ride",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete ride",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/home/3/complete_ride/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"home",
+						"3",
+						"complete_ride",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel ride",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 53701e0cc0f8e8c0e5f62de8fbf4ab3434f269ed",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/home/3/cancel_ride/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"home",
+						"3",
+						"cancel_ride",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rides based on filter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 53701e0cc0f8e8c0e5f62de8fbf4ab3434f269ed",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/home/get_rides?travel_type=2&package=2&source_city=Delhi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"home",
+						"get_rides"
+					],
+					"query": [
+						{
+							"key": "travel_type",
+							"value": "2"
+						},
+						{
+							"key": "package",
+							"value": "2"
+						},
+						{
+							"key": "source_city",
+							"value": "Delhi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
