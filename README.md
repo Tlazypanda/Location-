@@ -1,5 +1,5 @@
 # Location-  
-The api is implemented using Django Rest Framework.Currently 4 views are designed -   
+The api is implemented using Django Rest Framework.A postman collection for the working api is shared in this repo.Currently 4 views are designed -   
 1.Book a ride : This feature allows you to book a ride given on the parameters mentioned.It has several checks to ensure the conditions mentioned in the doc.   
 2.Complete a ride :This feature allows you to mark a ride as completed and sets the end time of ride.Once marked completed it cant be canceled.  
 3.Cancel a ride : This feature allows you to cancel a ride.Once completed ride cant be canceled.  
